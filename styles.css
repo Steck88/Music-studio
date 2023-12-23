@@ -197,18 +197,28 @@ footer{
     header {
         flex-direction: column;
         text-align: center;
+        position: relative; /* Add relative positioning to the header */
+    }
+
+    nav {
+        position: absolute; 
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background-color: #2E2C2B;
+        z-index: 1;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
     }
 
     nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
         padding: 0;
         margin: 0;
-        position: absolute;
-        background-color: #2E2C2B;
-        z-index: 1;
-        top: 60px; 
+        justify-content: space-around;
     }
 
     nav ul li {
@@ -218,10 +228,6 @@ footer{
 
     .logo {
         order: -1;
-    }
-
-    nav {
-        position: relative;
     }
 
     nav input[type="checkbox"] {
@@ -239,5 +245,11 @@ footer{
     nav input[type="checkbox"]:checked ~ ul {
         display: flex;
     }
+    .scroller-container img {
+        width: 300px;
+        height: 250px; 
+        margin-right: 10px; 
+    }
 }
+
 
